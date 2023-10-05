@@ -94,3 +94,18 @@
 //     }
 // }
 // ***************Q16 **********************
+// var reply = "no, I will inform him";
+// var revisedReply = reply.replace("no","yes");
+// console.log(revisedReply);
+
+// var str = "1 member is suitable";
+// var newStr = str.replace("1","one");
+// console.log(newStr);
+// ***************Q17 **********************
+// var x = "a is the member of a abc "
+// var y = x.replaceAll("a", "z");
+// console.log(y);
+// ***************Chapter no 26 **********************
+// var num = 1.526789;
+// num = Math.round(num);
+// console.log(num);
