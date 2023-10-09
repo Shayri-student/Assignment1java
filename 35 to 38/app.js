@@ -71,6 +71,17 @@
 // count(n1,n2);
 // **************8******************
 
+function calculateSquare(){
+    var perp = +prompt("Enter perpendicular");
+    var base = +prompt("Enter Base");
+    return (perp*perp) + (base*base);  
+}
+
+var hypSquare = calculateSquare();
+console.log(hypSquare); 
+// *****************9****************
+
+
 
 
 
