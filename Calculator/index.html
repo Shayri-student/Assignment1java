@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <div class="border">
+            <h1>CALCULATOR</h1>
+            <div>
+                <input id="input" type="text">
+            </div>
+            <div>
+                <button onclick="clear()">C</button>
+                <button onclick="Value(this)">7</button>
+                        <button onclick="Value(this)">8</button>
+                        <button onclick="Value(this)">9</button>
+                        <button onclick="Value(this)">*</button>
+            </div>
+            <div>
+                <button onclick="clearwhole()">AC</button>
+                <button onclick="Value(this)">4</button>
+                <button onclick="Value(this)">5</button>
+                <button onclick="Value(this)">6</button>
+                <button onclick="Value(this)">-</button>
+            </div>
+            <div>
+                <button onclick="Value(this)">0</button>
+                <button onclick="Value(this)">1</button>
+                <button onclick="Value(this)">2</button>
+                <button onclick="Value(this)">3</button>
+                <button onclick="Value(this)">+</button>
+            </div>
+            <div>
+                <button onclick="Value(this)">00</button>
+                <button onclick="Value(this)">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="Value(this)">%</button>
+                <button onclick="Value(this)">/</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

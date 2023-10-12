@@ -21,9 +21,9 @@
 //     });
 // });
 
-var playSoundLink = document.getElementById("Playsoundlink");
-var sound = document.getElementById("Sound");
-playSoundLink.addEventListener("click",function(event){
-    event.preventDefault();
-    sound.play();
-})
+// var playSoundLink = document.getElementById("Playsoundlink");
+// var sound = document.getElementById("Sound");
+// playSoundLink.addEventListener("click",function(event){
+//     event.preventDefault();
+//     sound.play();
+// })
