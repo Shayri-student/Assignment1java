@@ -1,0 +1,97 @@
+body{
+    background-color: #333;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    background-image: url("./Untitled\ design.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#heading{
+    font-size: 60px;
+    /* background-color:transparent; */
+    text-align: center;
+    padding: 20px 0;
+    color: #9495ad;
+    text-decoration:overline;
+
+    
+}
+#baap{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+#timers{
+    margin-top: 4%;
+    /* margin-left: 0.5%; */
+    /* width: 400px; */
+    background-color:transparent;
+    border: 5px solid transparent;
+    box-shadow:1px 4px 10px 10px #d9dde1;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transform-origin: center;
+    /* font-size: 36px; */
+    /* margin : 30px; */   
+}
+#hourHeading, #MinHeading, #secHeading, #msecHeading{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    font-size: 45px;
+}
+ 
+button{
+border: 2px double white;
+background-color:transparent;
+color:white;
+font-weight: bold;
+font-size: 24px;
+border-radius: 50px;
+margin: 8px 10px 10px 10px;
+padding: 15px 30px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #bc32a1;
+    /* cursor: pointer; */
+}
+ /* add animation to the timer */
+ #timers{
+    animation: timerAnimation 1s linear infinite;
+ }
+ @keyframes timerAnimation{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    } 
+    100% {
+        transform: scale(1);
+    }
+}
+@media (max-width: 576px){
+  #timers{
+    display: flex;
+  }  
+  #hourHeading, #MinHeading, #secHeading, #msecHeading{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+}
