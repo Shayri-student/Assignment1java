@@ -1,0 +1,41 @@
+/* Top designing */
+#logo{
+    width: 70px;
+    padding: 0;
+    margin: 0;
+}
+#logotxt{
+    font-weight:600;
+    font-size:x-large;
+}
+.search{
+    width: 550px;
+}
+/* signup and ad to cart */
+.cardsign{
+    width: 350px;
+}
+.bkcolor{
+    background-color:#2b7ec2;
+}
+.txtcolr{
+    color: white !important;
+}
+@media only screen and (max-width: 768px) {
+    /* for mobile */
+    #logo{
+        width: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    #logotxt{
+        font-weight:600;
+        font-size:18px;
+    }
+    .search{
+        width: 300px;
+    }
+    .cardsign{
+        width: 100px;
+    }
+  }
