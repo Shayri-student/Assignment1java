@@ -1,0 +1,52 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("https://www.wallpapertip.com/wmimgs/43-438974_background-image-dark-grey.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    margin: 0;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2em;
+}
+
+.input {
+    height: 30px;
+    width: 250px;
+    margin: 10px;
+    font-size: 1em;
+}
+
+.submit {
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+}
+
+.submit:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

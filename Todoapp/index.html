@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoApp</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Firebase JS libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
 </head>
 <body>
     <div id="main">
-    <div style="text-align: center;" >
-        <input id="inputField" type="text">
-        <button class="button" onclick="addtodo()">Add items</button>
-        <button class="button" onclick="deleteAll()">Delete All</button>
+        <div style="text-align: center;">
+            <input id="inputField" type="text">
+            <button class="button" onclick="addtodo()">Add items</button>
+            <button class="button" onclick="deleteAll()">Delete All</button>
+        </div>
+        <div>
+            <ul id="list" style="text-align: center; list-style: none;"></ul>
+        </div>
     </div>
-    <div>
-        <ul id="list" style="text-align: center;list-style: none;">
-
-        </ul>
-    </div>
-</div>
+    <script src="./app.js"></script>
 </body>
-<script src="./app.js"></script>
 </html>
