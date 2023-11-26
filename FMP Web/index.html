@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Shariq</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Whatsapp font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- CSS link -->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -19,9 +22,9 @@
       <button class="btn btn-outline-success rounded-0 bkcolor" type="submit"><i class="fa-solid fa-magnifying-glass txtcolr"></i></button>
     </form></div>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg bkcolor navbar-dark">
+    <!-- <nav class="navbar navbar-expand-lg bkcolor navbar-dark">
         <div class="container-fluid border border-primary">
-          <!-- <a class="navbar-brand" href="#"><img width="50px" src="./Images/logo.png" alt=""></a> -->
+           <a class="navbar-brand" href="#"><img width="50px" src="./Images/logo.png" alt=""></a> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +34,7 @@
                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item pe-4">
-                <a class="nav-link active" href="#">About Us</a>
+                <a class="nav-link active" href="#About">About Us</a>
               </li>
               <li class="nav-item dropdown pe-4">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,8 +43,8 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Acrylic</a></li>
                   <li><a class="dropdown-item" href="#">Card </a></li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
-                  <li><a class="dropdown-item" href="#">Wooden</a></li>
+                  <li><hr class="dropdown-divider"></li> 
+                  <li><a class="dropdown-item" href="./Wooden.html">Wooden</a></li>
                   <li><a class="dropdown-item" href="#">Plastic</a></li>
                 </ul>
               </li>
@@ -52,7 +55,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Birthday</a></li>
                   <li><a class="dropdown-item" href="#">Engagement</a></li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
+                   <li><hr class="dropdown-divider"></li> 
                   <li><a class="dropdown-item" href="#">Wedding</a></li>
                   <li><a class="dropdown-item" href="#">Aniversary</a></li>
                   <li><a class="dropdown-item" href="#">Aqeeqa</a></li>
@@ -72,13 +75,49 @@
         <span class="d-flex justify-content-end fs-5 border border-primary cardsign">
           <ul class="navbar-nav">
             <li class="nav-item pe-4">
-              <a class="nav-link active " href="#"><i class="fa-solid fa-user"></i></a>
+              <a class="nav-link active " href="#"><i class="fa-solid fa-user"></i>
+              <select name="" id="">
+                <option value=""></option>
+              </select></a>
             </li>
             <li class="nav-item pe-4">
               <a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
           </ul>
         </span>
+      </nav> -->
+      <nav>
+        <div id="menu-toggle-container">
+          <i id="menu-toggle" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <div id="menu-items">
+          <a href="./index.html">Home</a>
+          <a href="#About">About Us</a>
+          <div class="custom-dropdown">
+            <a href="#">Packaging</a>
+            <div class="custom-dropdown-content">
+              <a href="./AcrylicBox.html">Acrylic</a>
+              <a href="./Wooden.html">Wooden</a>
+              <a href="./CardBox.html">Card</a>
+              <a href="./plasticbox.html">Plastic</a>
+            </div>
+          </div>
+          <a href="#">Contact Us</a>
+        </div>
+      
+        <div class="custom-right-options">
+          <i class="fa-solid fa-user"></i><a href="#">Signup</a>
+          <div id="cart">
+            <i class="fa-solid fa-cart-shopping" onclick="toggleCartDropdown()"></i>
+            <div id="cart-dropdown">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                <i class="fa-solid fa-bars"></i>
+              <!-- Product items will be added here dynamically -->
+              <a href="#">Checkout</a>
+            </div>
+          </div>
+        </div>
       </nav>
       <!-- carousel -->
       <div id="carouselExampleCaptions" class="carousel slide">
@@ -90,24 +129,24 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img  height="100%" src="./Images/Banner/402632994_846768117454774_9149121312148797446_n.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
-            </div>
+            </div> -->
           </div>
           <div class="carousel-item">
             <img height="100%"src="./Images/Banner/2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>Some representative placeholder content for the second slide.</p>
-            </div>
+            </div> -->
           </div>
           <div class="carousel-item">
             <img height="600px" src="./Images/Banner/3.jpg" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
               <p>Some representative placeholder content for the third slide.</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -123,27 +162,27 @@
       <main class="container mt-3">
         <!-- Section 1 Category -->
         <section class="border p-2 mb-3 rounded">
-          <h3>Categories</h3>
+          <h3 class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">Categories</h3>
           <div class="row">
             <div class="col-md-3">
               <div class="text-center">
                 <img width="80%" src="./Images/Acrylic/IMG20220818225047-removebg-preview.png" alt=""><br>
-                <button class="btn bkcolor text-white rounded-0">Acrylic Box</button>
+                <button onclick="OpenAcrylic()" class="btn bkcolor text-white rounded-0">Acrylic Box</button>
               </div></div>
               <div class="col-md-3">
               <div class="text-center">
                 <img width="80%" src="./Images/Wooden/317944354_585919263539662_9052256590013482562_n-removebg-preview.png" alt=""><br>
-                <button class="btn bkcolor text-white rounded-0">Wooden</button>
+                <button onclick="OpenWooden()" class="btn bkcolor text-white rounded-0">Wooden</button>
               </div></div>
               <div class="col-md-3">
               <div class="text-center">
                 <img width="70%" src="./Images/Card box/b8c49cd9-4a51-4abc-89d3-31a798b80596.png" alt=""><br>
-                <button class="btn bkcolor text-white rounded-0">Card Box</button>
+                <button onclick="OpenCard()" class="btn bkcolor text-white rounded-0">Card Box</button>
               </div></div>
               <div class="col-md-3">
               <div class="text-center">
                 <img width="70%" src="./Images/Plastic/352540740_1467837520624399_7718998349575698550_n-removebg-preview.png" alt=""><br>
-                <button class="btn bkcolor text-white rounded-0">Plastic Box</button>
+                <button onclick="OpenPlastic()" class="btn bkcolor text-white rounded-0">Plastic Box</button>
               </div></div>
 
           </div>
@@ -151,7 +190,7 @@
         </section>
         <!-- Introduction -->
         <section class="border p-2 mb-3 rounded">
-          <h3>About Us</h3>
+          <h3 id="About" class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">About Us</h3>
           <div class="row">
             <div class="col-md-6">
               <div class="mt-3 text-center">
@@ -167,100 +206,117 @@
                  <button class="btn bkcolor text-white rounded-0 fs-5">Learn More</button>
 
               </div>
-            </div>
-
-          </div>
+            </div></div>
+            <div class="row">
+            <div class="col-md-6">
+              <div class="mt-5 me-5 ms-5">
+                <h4 class="fs-2">Best In Class Customizations</h4> <br>
+                <p class="fs-6 lh-lg">Customize your packaging and create a lasting impression. <br><br>
+                  Shamsi Packages has been a trusted name in the industry for over 35 years. We carry a wide selection of packaging products. <br><br>
+                 <b>We strive to deliver a seamless packaging experience that combines exceptional quality, affordability, and personalized service.</b> <br><br>
+                 <button class="btn bkcolor text-white rounded-0 fs-5">Our Products</button>
+              </div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-center mt-3 pb-5">
+                <img width="33%" height="200" src="./Images/About Us/2.jpg" alt="">
+                <img width="33%" src="./Images/About Us/3.jpg" alt="">
+                <img width="33%" src="./Images/About Us/5.jpg" alt="">
+                <img width="33%" src="./Images/About Us/6.jpg" alt=""></div>
+                </div>
+                </div>
+              
         </section>
         <!-- Popular Products -->
-        <section class="border p-2 mb-3 rounded">
-          <h3>Trending Products</h3>
-          <div class="row">
+        <section class="border p-4 mb-3 rounded ">
+          <h3 class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">Trending Products</h3>
+          <div class="row pe-4">
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Chocolate Gift Box</h5>
+                  <p class="card-text">Size : 4 By 12 By 3 Chocolate is a really perfect present for any event.<b>  <del>150Rs</del>&nbsp;120Rs</b>  </p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '150', './Images/Cards/3.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Wedding Gift Box</h5>
+                  <p class="card-text">Size : 12 By 12 By 12 Best Acrylic Box With Shiny Appearance. <b>  <del>1500Rs</del>&nbsp;1200Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1200', './Images/Cards/4.jpg')">Add to Cart</a>
                 </div>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Acrylic Gift Carry</h5>
+                  <p class="card-text">Size : 6 By 10 By 8 Best Acrylic Box With Shiny Appearance. <b>  <del>2500Rs</del>&nbsp;1800Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1800', './Images/Cards/1.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Dry Fruit Tray</h5>
+                  <p class="card-text">Size : 15 By 15 By 1.8 The Dry Fruit Tray is perfect for gift-giving in all situations. <b>  <del>1000Rs</del>&nbsp;750Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '750', './Images/Cards/2.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
 
           </div>
-          <div class="row mt-4">
+          <div class="row mt-4 pe-4">
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Small Sweet Box</h5>
+                  <p class="card-text">Size : 5 By 5 By 2 Best Card Box With Different Colors. <br> <b>  <del>150Rs</del>&nbsp;90Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '90', './Images/Cards/5.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/6.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Dry Fruit Card Box</h5>
+                  <p class="card-text">Size : 7 By 9 By 1.5 Best Boxs With 9 Portion. <br> <b>  <del>250Rs</del>&nbsp;185Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '185', './Images/Cards/6.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/7.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Wooden V-Basket</h5>
+                  <p class="card-text">Size : 10 BY 14 BY 2 Carry Wedding and Occasional gifts. <br> <b>  <del>2000Rs</del>&nbsp;1500Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1500', './Images/Cards/3.jpg')">Add to Cart</a>
                 </div>
               </div>
 
             </div>
             <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card m-3" style="width: 18rem;">
                 <img src="./Images/Cards/8.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Acrylic Portion Box</h5>
+                  <p class="card-text">Size : 8 By 12 By 2.5 Best Carry Acrylic Box With Shiny Appearance. <b>  <del>1200Rs</del>&nbsp;999Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '999', './Images/Cards/8.jpg')">Add to Cart</a>
                 </div>
               </div>
 
@@ -268,13 +324,132 @@
 
           </div>
         </section>
+         <!-- Popular Brands -->
+
+         <section class="border p-2 mb-3 rounded">
+          <h4 class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">Popular Brands Trust</h4>
+          <div class="row">
+              <div class="col">
+                  <div class="text-center p-2">
+                      <img width="65%" src="./Images/Popular Brands/1.png"><br>
+                      <h5>Oppule</h5>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="text-center p-0 m-0">
+                      <img width="65%" src="./Images/Popular Brands/2">
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="text-center p-2">
+                      <img width="65%" src="./Images/Popular Brands/3.png">
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="text-center p-2">
+                      <img width="65%" src="./Images/Popular Brands/4.jpg">
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="text-center p-2">
+                      <img width="65%" src="./Images/Popular Brands/5.jpg">
+                  </div>
+              </div>
+          </div>
+      </section>
 
 
       </main>
+      <br>
+      <!-- ******************Footer*********** -->
+      <footer class="bkcolor container-fluid text-white">
+        <main class="container"> <br>
+            <section class="row">
+                <div class="col-md-6">
+                    <div class='m-2'>
+                        <h2>
+                            Store Information
+                        </h2>
+                        <p><i class="fa-solid fa-location-dot"></i> Shop No 7, Prince Square Block - B, opp. Shahid Sports, Nazimabad Number 2 Karachi, 74600</p>
+                        <p>
+                            <a href="tel:000000000" class="text-white text-decoration-none">
+
+
+                                <i class="fa-solid fa-phone"></i> 0336-8043017
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href="mailto:someone@gmail.com" class="text-white text-decoration-none">
+
+                                <i class="fa-solid fa-envelope"></i> shamsipackagesofficial@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <h2>Newsletter</h2>
+                        <p>Subscribe to our latest newsletter to get news about special discounts.</p>
+                        <div class="d-flex p-2">
+                            <input type="text" class="form-control rounded-0" placeholder="Search">
+                            <button class="btn bg-white rounded-0">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <a href="">
+                            <img src="images/icons/app-icon-1.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/icons/app-icon-2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section class="row m-0">
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-around">
+                        <a href="https://www.facebook.com/Shamsipackages" class="text-white fs-3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/PackagesShamsi?t=pLOmslx8d4bpWUU1eCe5pw&s=09" class="text-white fs-3"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/@shamsipackages" class="text-white fs-3"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/Shamsipackages/" class="text-white fs-3"> <i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.instagram.com/shamsipackages/?hl=en" class="text-white fs-3"> <i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-2 m-0">
+                        <p>© 2023 - Ecommerce software by Markedea™</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-around mt-2">
+                        <img src="images/paymentImg/carte_bleue.png" alt="">
+                        <img src="images/paymentImg/visa.png" alt="">
+                        <img src="images/paymentImg/master_card.png" alt="">
+                        <img src="images/paymentImg/american_express.png" alt="">
+                        <img src="images/paymentImg/paypal.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </footer>
+    <!-- <div >
+      <a href="https://wa.me/03368043017?text=Hi,%20How%20may%20I%20help%20You?" class="Whatsapp"><img class="rounded-5" width="90" src="./Images/Whatsapp icon/1.png" alt=""></a>
+    </div> -->
+    <!-- //--Whatsapp link -->
+    <a href="https://wa.me/03368043017?text=Hi,%20How%20may%20I%20help%20You?" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+
+
+
 
     
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

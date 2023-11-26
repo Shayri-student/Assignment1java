@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wooden</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Whatsapp font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- //Top work -->
+    <div class="d-flex justify-content-between border border-primary ps-4 pe-5 pt-0 pb-0"><span class="d-flex justify-content-center align-items-center"><img id="logo" src="./Images/logo.png" alt="">
+    <p id="logotxt">Shamsi Packages</p></span>
+    <form class="d-flex justify-content-center align-items-center" role="search">
+      <input class="form-control search rounded-0" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success rounded-0 bkcolor" type="submit"><i class="fa-solid fa-magnifying-glass txtcolr"></i></button>
+    </form></div>
+    <!-- nav bar -->
+    <nav>
+        <div id="menu-toggle-container">
+          <i id="menu-toggle" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <div id="menu-items">
+          <a href="./index.html">Home</a>
+          <a href="./index.html">About Us</a>
+          <div class="custom-dropdown">
+            <a href="#">Packaging</a>
+            <div class="custom-dropdown-content">
+              <a href="./AcrylicBox.html">Acrylic</a>
+              <a href="./Wooden.html">Wooden</a>
+              <a href="./CardBox.html">Card</a>
+              <a href="./plasticbox.html">Plastic</a>
+            </div>
+          </div>
+          <a href="#">Contact Us</a>
+        </div>
+      
+        <div class="custom-right-options">
+          <i class="fa-solid fa-user"></i><a href="#">Signup</a>
+          <div id="cart">
+            <i class="fa-solid fa-cart-shopping" onclick="toggleCartDropdown()"></i>
+            <div id="cart-dropdown">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                <i class="fa-solid fa-bars"></i>
+              <!-- Product items will be added here dynamically -->
+              <a href="#">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- ***************Main************** -->
+      <main class="container mt-3">
+       <!-- Section 1 Category -->
+       <section class="border p-2 mb-3 rounded">
+        <h3 class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">Categories</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="text-center">
+              <img width="80%" src="./Images/Acrylic/IMG20220818225047-removebg-preview.png" alt=""><br>
+              <button onclick="OpenAcrylic()" class="btn bkcolor text-white rounded-0">Acrylic Box</button>
+            </div></div>
+            <div class="col-md-3">
+            <div class="text-center">
+              <img width="80%" src="./Images/Wooden/317944354_585919263539662_9052256590013482562_n-removebg-preview.png" alt=""><br>
+              <button onclick="OpenWooden()" class="btn bkcolor text-white rounded-0">Wooden</button>
+            </div></div>
+            <div class="col-md-3">
+            <div class="text-center">
+              <img width="70%" src="./Images/Card box/b8c49cd9-4a51-4abc-89d3-31a798b80596.png" alt=""><br>
+              <button onclick="OpenCard()" class="btn bkcolor text-white rounded-0">Card Box</button>
+            </div></div>
+            <div class="col-md-3">
+            <div class="text-center">
+              <img width="70%" src="./Images/Plastic/352540740_1467837520624399_7718998349575698550_n-removebg-preview.png" alt=""><br>
+              <button onclick="OpenPlastic()" class="btn bkcolor text-white rounded-0">Plastic Box</button>
+            </div></div>
+
+        </div>
+
+      </section>
+        <!-- Acrylic Products -->
+        <section class="border p-4 mb-3 rounded ">
+          <h3 class="p-2 m-2 pb-3 border border-top-0 border-end-0 border-start-0">Acrylic Products</h3>
+          <div class="row pe-4">
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img src="./Images/Acrylic/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Jewellery Gift Box</h5>
+                  <p class="card-text">Size : 4 By 4 By 3 Chocolate is a really perfect present for any event.<b>  <del>450Rs</del>&nbsp;320Rs</b>  </p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '320', './Images/Acrylic/1.jpg')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img height="215" src="./Images/Acrylic/2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Wedding Gift Box</h5>
+                  <p class="card-text">Size : 12 By 12 By 5 Best Acrylic Box With Shiny Appearance. <b>  <del>1800Rs</del>&nbsp;1499Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1499', './Images/Acrylic/2.jpeg')">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img src="./Images/Acrylic/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Acrylic Gift Carry</h5>
+                  <p class="card-text">Size : 6 By 10 By 8 Best Acrylic Box With Shiny Appearance. <b>  <del>2850Rs</del>&nbsp;2500Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '2500', './Images/Acrylic/3.png')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img height="215" src="./Images/Acrylic/4.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Acrylic Cookey Box</h5>
+                  <p class="card-text">Size : 5 By 5 By 8 The Dry Fruit Tray is perfect for gift-giving in all situations. <b>  <del>1200Rs</del>&nbsp;899Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '899', './Images/Acrylic/4.jpeg')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row mt-4 pe-4">
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img height="215" src="./Images/Acrylic/6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cake Sweet Box</h5>
+                  <p class="card-text">Size : 10 By 10 By 10 Best Card Box With Different Colors. <br> <b>  <del>1550Rs</del>&nbsp;1499Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1499', './Images/Acrylic/6.png')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img height="215" src="./Images/Acrylic/7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dry Fruit Box</h5>
+                  <p class="card-text">Size : 7 By 9 By 1.5 Best Boxs With 9 Portion. <br> <b>  <del>1150Rs</del>&nbsp;950Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '950', './Images/Acrylic/7.jpg')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img height="215" src="./Images/Acrylic/8.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Acrylic Suit Box</h5>
+                  <p class="card-text">Size : 10 BY 14 BY 2 Carry Wedding and Occasional gifts. <br> <b>  <del>2150Rs</del>&nbsp;1850Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1850', './Images/Acrylic/8.jpeg')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card m-3" style="width: 18rem;">
+                <img src="./Images/Acrylic/5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Acrylic Special Box</h5>
+                  <p class="card-text">Size : 8 By 12 By 2.5 Best Carry Acrylic Box With Shiny Appearance. <b>  <del>2350Rs</del>&nbsp;1900Rs</b></p>
+                  <a href="#" class="btn btn-primary" onclick="addToCart('Chocolate Gift Box', '1900', './Images/Acrylic/5.jpg')">Add to Cart</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+      </main>
+      <br>
+   <!-- ******************Footer*********** -->
+   <footer class="bkcolor container-fluid text-white">
+    <main class="container"> <br>
+        <section class="row">
+            <div class="col-md-6">
+                <div class='m-2'>
+                    <h2>
+                        Store Information
+                    </h2>
+                    <p><i class="fa-solid fa-location-dot"></i> Shop No 7, Prince Square Block - B, opp. Shahid Sports, Nazimabad Number 2 Karachi, 74600</p>
+                    <p>
+                        <a href="tel:000000000" class="text-white text-decoration-none">
+
+
+                            <i class="fa-solid fa-phone"></i> 0336-8043017
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="mailto:someone@gmail.com" class="text-white text-decoration-none">
+
+                            <i class="fa-solid fa-envelope"></i> shamsipackagesofficial@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our latest newsletter to get news about special discounts.</p>
+                    <div class="d-flex p-2">
+                        <input type="text" class="form-control rounded-0" placeholder="Search">
+                        <button class="btn bg-white rounded-0">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <a href="">
+                        <img src="images/icons/app-icon-1.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/icons/app-icon-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <section class="row m-0">
+            <div class="col-md-4">
+                <div class="d-flex justify-content-around">
+                    <a href="https://www.facebook.com/Shamsipackages" class="text-white fs-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/PackagesShamsi?t=pLOmslx8d4bpWUU1eCe5pw&s=09" class="text-white fs-3"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@shamsipackages" class="text-white fs-3"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.pinterest.com/Shamsipackages/" class="text-white fs-3"> <i class="fa-brands fa-pinterest"></i></a>
+                    <a href="https://www.instagram.com/shamsipackages/?hl=en" class="text-white fs-3"> <i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mt-2 m-0">
+                    <p>© 2023 - Ecommerce software by Markedea™</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex justify-content-around mt-2">
+                    <img src="images/paymentImg/carte_bleue.png" alt="">
+                    <img src="images/paymentImg/visa.png" alt="">
+                    <img src="images/paymentImg/master_card.png" alt="">
+                    <img src="images/paymentImg/american_express.png" alt="">
+                    <img src="images/paymentImg/paypal.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</footer>
+    <!-- //--Whatsapp link -->
+    <a href="https://wa.me/03368043017?text=Hi,%20How%20may%20I%20help%20You?" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
